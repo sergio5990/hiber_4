@@ -4,12 +4,12 @@ import lombok.*;
 import javax.persistence.*;
 @Data
 @NoArgsConstructor @AllArgsConstructor
-@Entity @Table(name = "PERSON")
+
+@Entity
+@Table(name = "PERSON")
 @Inheritance(strategy= InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "PERSON_TYPE",
         discriminatorType = DiscriminatorType.CHAR)
-//@DiscriminatorFormula("case when COMPANY is not null then 'E' else 'S' end")
-//@DiscriminatorOptions(force = false, insert = true)
 @DiscriminatorValue("P")
 public class Person {
     @Id

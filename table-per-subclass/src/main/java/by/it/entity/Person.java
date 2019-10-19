@@ -5,10 +5,12 @@ import org.hibernate.annotations.PolymorphismType;
 
 import javax.persistence.*;
 @Data
-@NoArgsConstructor @AllArgsConstructor
-@Entity @Table(name = "PERSON")
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "PERSON")
 @Inheritance(strategy= InheritanceType.JOINED)
-@Polymorphism(type = PolymorphismType.EXPLICIT)
+@Polymorphism(type = PolymorphismType.IMPLICIT)
 public class Person implements Personable {
     @Id
     @GeneratedValue

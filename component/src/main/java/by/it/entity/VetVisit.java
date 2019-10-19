@@ -1,5 +1,6 @@
 package by.it.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,23 +15,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.UpdateTimestamp;
 
-/**
- * Created by Yauheni Krasko on 14.10.2017.
- */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
 public class VetVisit {
 
-//    @CreationTimestamp
-    @Column(insertable = false, updatable = false, nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date firstVisit;
+    private LocalDateTime createdDate;
 
-//    @UpdateTimestamp
-    @Column(insertable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastVisit;
+    @Column(insertable = false)
+    private LocalDateTime updatedDate;
 }

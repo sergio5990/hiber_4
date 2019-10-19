@@ -12,13 +12,6 @@ public class EMUtil {
         return emFactory.createEntityManager();
     }
 
-    public static EntityManager getEntityManager(String unit) {
-        if (emFactory == null) {
-            emFactory = Persistence.createEntityManagerFactory(unit);
-        }
-        return emFactory.createEntityManager();
-    }
-
     public static void closeEMFactory() {
         emFactory.close();
     }

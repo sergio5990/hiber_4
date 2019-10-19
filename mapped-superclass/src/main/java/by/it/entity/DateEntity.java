@@ -14,13 +14,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-/**
- * Class DateEntity
- *
- * Created by yslabko on 01/23/2017.
- */
-@Data @ToString
+@Data
+@ToString
 @NoArgsConstructor
+
+
 @MappedSuperclass
 public class DateEntity {
     @Id

@@ -8,12 +8,7 @@ public class EMUtil {
     private static EntityManagerFactory emFactory=null;
 
     public static EntityManager getEntityManager() {
-        emFactory  = Persistence.createEntityManagerFactory("by.it.test");
-        return emFactory.createEntityManager();
-    }
-
-    public static EntityManager getEntityManager(String unit) {
-        emFactory  = Persistence.createEntityManagerFactory(unit);
+        emFactory  = Persistence.createEntityManagerFactory("by.it");
         return emFactory.createEntityManager();
     }
 

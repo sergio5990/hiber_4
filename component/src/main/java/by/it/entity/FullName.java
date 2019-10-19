@@ -6,11 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
 
-/**
- * Class FullName
- *
- * Created by yslabko on 01/23/2017.
- */
 @Data
 @NoArgsConstructor @AllArgsConstructor
 @Embeddable
